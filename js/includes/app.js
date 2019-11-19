@@ -179,4 +179,15 @@ let app = (function($) {
 
 $(function() {
     app.init();
+
+    let videoEl = document.querySelector('.video'),
+        btnPlay = document.querySelector('.play-sound');
+
+
+    btnPlay.addEventListener('click', function() {
+        console.log(videoEl.muted);
+        videoEl.muted = videoEl.muted === true ? false : true;
+        console.log(videoEl.muted);
+    }, false);
+
 });

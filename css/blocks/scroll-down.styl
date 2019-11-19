@@ -1,0 +1,107 @@
+.hover-vk:hover
+	color #4680C2
+.hover-fb:hover
+	color #3b5998
+.hover-yt:hover
+	color #c4302b
+.hover-inst:hover svg
+	fill url(#inst)
+	transition .2s ease-out
+	
+
+.play-sound
+	color #fff
+	position absolute
+	right 0
+	bottom 12%
+	background-color rgba(59, 89, 152, 0.4)
+	height 45px
+	width 45px
+	border-radius 50%
+	cursor pointer
+	display flex
+	align-items center
+	justify-content center
+	font-size 13px
+	font-weight 200
+	transition background-color .2s linear
+	user-select none
+	@media (max-width: 420px)
+		bottom 15%
+		right 5%
+	&.is-active
+		background-color rgba(59, 89, 152, 0.8)
+	&__wrap
+		position relative
+		height 100%
+		width 100%
+		svg
+			display inline-block
+			position absolute
+			height 45%
+			width 45%
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			transition opacity .3s ease-out
+	&--volume
+	&.is-active &--mute
+		opacity 0
+	&.is-active &--volume
+		opacity 1
+	&--volume-s
+		animation play .5s linear infinite alternate
+	&--volume-l
+		animation play .5s .5s linear infinite alternate
+
+.scroll-down
+	cursor pointer
+	position absolute
+	bottom 5%
+	left 50%
+	transform translateX(-50%)
+	display flex
+	flex-direction column
+	align-items center
+	@media (max-width: 420px)
+		display none
+	&__icon
+		color #fff
+		height 35px
+		width 36px
+		svg
+			width 100%
+	&__arrow
+		background-color #fff
+		height 28px
+		width 2px
+		margin-top 10px
+		position relative
+		animation updown 1s linear infinite alternate
+		&:before
+		&:after
+			content ''
+			position absolute
+			width 2px
+			height 10px
+			background-color #fff
+			bottom 0
+			transform-origin bottom
+		&:before
+			left 0
+			transform rotate(-35deg)
+		&:after
+			transform rotate(35deg)
+			right 0
+			
+@keyframes updown
+	from
+		transform translateY(-2px)
+	to
+		transform translateY(3px)
+		
+@keyframes play
+	from
+		opacity 0
+	to
+		opacity 1

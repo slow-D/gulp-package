@@ -1,0 +1,70 @@
+@media (hover: none)
+  body
+    .block-menu__item:hover
+      box-shadow 0 8px 15px -7px
+      transform inherit
+    
+@media (max-width: 420px)
+  body
+    .mobile-menu-gamburg
+      display flex
+    .col
+      width auto
+    .header
+      padding-right 15px
+      padding-left 15px
+      width auto
+      &__logo
+        height 30px
+      &__menu
+        display none
+      &__contact
+        display none
+        &--mobile-icons
+          display flex
+    .btn-primary
+      font-size 14px
+    .head--lk
+      font-size 38px
+      line-height 1.2
+      margin-bottom 20px
+    .block-welcome
+      background-position center
+      background-size auto 100%
+      padding-top 40px
+      padding-left 15px
+      margin-bottom 25px
+      &__overlay
+        background-image background-image linear-gradient(to right, rgba(28, 50, 91, .85) 50%, rgba(28, 50, 91, .75) 100%)
+    .t-bold
+      font-size 16px
+      margin-bottom 40px
+    .block-menu
+      flex-direction column
+      padding 0 15px
+      &__item
+        width 100%
+        &:not(:last-of-type)
+          margin-bottom 35px
+        &-text
+          padding 0 35px
+          h2
+            font-size 20px
+            min-height 45px
+            margin-bottom 35px
+          .btn-primary
+            padding 0
+            display flex
+            align-items center
+            justify-content center
+            width 100%
+        &-img
+          margin-bottom 35px
+    .footer
+      &__wrap
+        flex-direction column
+        padding 0 15px
+        & > *
+          margin-bottom 15px
+      &__copy
+        text-align center

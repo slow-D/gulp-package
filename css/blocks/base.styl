@@ -1,19 +1,11 @@
 html
-	height 100%
-	width 100%
 	min-width 320px
-	padding 0px
-	margin 0px
 	position relative
 	&.scroll-locked
 		overflow hidden
 		body
 			overflow hidden
 body
-	height 100%
-	width 100%
-	padding 0px
-	margin 0px
 	set('font-size', 14px 16px n n 18px n)
 	set('line-height', 1.35em 1.37em n n 1.38em n)
 	color $baseFontColor
@@ -45,14 +37,14 @@ body
 	display none
 	background-color rgba(#000,0.5)
 	
-p, ul, ol, table
-	margin 0px
-	padding 0
-	margin-y 1em
-	color $baseFontColor
-	font-weight 300
-	+above(xl)
-		margin-y 1.5em
+// p, ul, ol, table
+// 	margin 0px
+// 	padding 0
+// 	margin-y 1em
+// 	color $baseFontColor
+// 	font-weight 300
+// 	+above(xl)
+// 		margin-y 1.5em
 ol, ul
 	margin-left 20px
 li
@@ -61,19 +53,19 @@ li
 	+above(md)
 		margin-y 10px
 
-a
-	text-decoration none
-	display inline
-	color $baseLinkColor
-	border-bottom 1px solid  rgba($baseLinkColor, 0.5)
-	&:hover, &:focus
-		color lighten($baseLinkColor, 20%)
-		text-decoration none
-		border-bottom-color transparent
-.a
-	aReset()
-	&:hover, &:focus
-		color lighten($baseFontColor, 20%)
+// a
+// 	text-decoration none
+// 	display inline
+// 	color $baseLinkColor
+// 	border-bottom 1px solid  rgba($baseLinkColor, 0.5)
+// 	&:hover, &:focus
+// 		color lighten($baseLinkColor, 20%)
+// 		text-decoration none
+// 		border-bottom-color transparent
+// .a
+// 	aReset()
+// 	&:hover, &:focus
+// 		color lighten($baseFontColor, 20%)
 
 h1, h2, h3, h4, h5, h6, .title
 	color $baseFontColor
@@ -148,3 +140,403 @@ table
 			
 .clearfix
 	clearfix()
+
+
+
+
+.hidden
+	display none
+  
+.no-scroll
+	overflow hidden
+	touch-action none
+
+.visible
+	animation visible .5s .4s forwards
+	&--text
+		animation visible-text .5s .6s forwards
+	&--gradient
+		animation visible-gradient 1s ease-out .7s forwards
+  
+.avatar
+	height 40px
+	width 40px
+	border-radius 50%
+	background-image url('/assets/images/person.jpg')
+	background-size cover
+	background-repeat no-repeat
+	margin-right 5px
+  
+.col
+	max-width 1280px
+	margin 0 auto
+	@media (min-width: 1919px)
+		max-width 1360px
+.row-flex
+	display flex
+	align-items center
+	justify-content space-between
+
+.link
+	color #7f9edb
+	font-size 16px
+  
+svg
+	overflow auto
+	height 100%
+	width auto
+	fill currentColor
+
+.t-bold
+	color #ead9bb
+	font-size 20px
+	font-weight bold
+	line-height 1.5
+	margin-bottom 50px
+	opacity 0
+	transform translateY(30px)
+
+.btn-primary
+	color #363739
+	background-image linear-gradient(to right, #ff8e07, #ff9815, #ffa220, #ffac2b, #ffb536)
+	height 50px
+	padding 0 35px
+	font-size 18px
+	font-weight 600
+	text-decoration none
+	display flex
+	align-items center
+	justify-content center
+	border-radius 25px
+	box-shadow 0 2px 7px -2px
+	transition .15s linear
+	&:hover
+		background-image linear-gradient(to right, #fff, #fff, #fff, #fff, #fff)
+		box-shadow 0 4px 10px -2px
+	&:active
+		box-shadow inset 0 0 10px -2px #000
+
+.menu-bg
+	// background-color red
+	height 100%
+	background-size auto 100%
+	background-repeat no-repeat
+	background-position center center
+  
+body
+	font-family "Montserrat", sans-serif
+	position relative
+main
+	background-color #fff
+
+.main-inside
+	padding-top 50px
+	padding-bottom 100px
+  	&__item
+    	&-wrap
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+      	&-item
+        	&:nth-of-type(n+7)
+          		margin-top 30px
+	        img
+				display inline-block
+				margin-bottom 25px
+	        figcaption
+				font-size 18px
+				font-weight 500
+	    &:not(:last-of-type)
+	    	margin-bottom 50px
+	    h2
+			color #363739
+			font-size 42px
+			font-weight 300
+			margin-bottom 35px
+
+.header
+	background-color #fff
+	padding 20px 0
+	position relative
+	width 100%
+	&__contact--mobile
+		margin-top 15%
+		padding 0 5%
+		display flex
+		flex-direction column
+		align-items center
+		.header__contact-person
+			justify-content center
+			margin-bottom 15px
+		.header__menu-item
+			color #fff
+		&-icons
+			display none
+			align-items center
+			&-item
+				color primaryBlueColor
+				width 25px
+				height 25px
+				display inline-block
+				&:first-of-type
+					margin-right 15px
+				svg
+					width 100%
+		&--inside
+			box-shadow 0 2px 6px -4px
+	&__logo
+		height 50px
+		display inline-block
+	&__menu
+		margin-left 0
+		&-item
+			color #595959
+			font-size 18px
+			margin-right 15px
+			text-decoration none
+			transition color .15s ease-out
+			&:hover
+				color #ccc
+			&--arrow
+				position relative
+				margin-right 20px
+				@media (max-width: 420px)
+					margin-right 0
+				&:hover:after
+					transform rotate(180deg)
+				&:after
+					content '▾'
+					position absolute
+					right -10px
+					font-size 16px
+					transform-origin 50%
+		&--mobile
+			display flex
+			flex-direction column
+			align-items center
+			padding-top 35px
+			&-item
+				color #fff
+				font-size 18px
+				text-decoration none
+				&:not(:last-of-type)
+					margin-bottom 25px
+		&__contact-person
+			margin-right 0
+			.header__menu-item
+				font-size 16px
+				margin-left 7px
+	&__contacts
+		display flex
+		flex-direction column
+		align-items center
+		@media (max-width: 420px)
+			display none
+		&-item
+			position relative
+			font-size 18px
+			text-decoration none
+			color #3b5998
+			font-weight 400
+			&:hover:after
+				width 100%
+			&:after
+				content ''
+				position absolute
+				width 0
+				left 0
+				bottom -1px
+				height 1px
+				background-color currentColor
+				transition width .2s linear
+			&:not(:last-of-type)
+				margin-bottom 8px
+  
+.head--lk
+	color #fff
+	font-size 70px
+	font-weight 100
+	margin-bottom 50px
+	opacity 0
+	transform translateX(-50px)
+
+
+
+#video-bg
+	position relative
+	overflow hidden
+	z-index 1
+	background #94a233
+	background-size cover
+	min-width 100%
+	height calc(100vh - 90px)
+	min-height calc(100vh - 90px)
+	@media (max-width: 420px)
+		min-height calc(100vh - 70px)
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			background-image linear-gradient(0deg, rgba(28, 50, 91, 1) 10%, rgba(28, 50, 91, 0) 75%)
+.video-bg__overlay
+	content ''
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color rgba(0, 0, 0, 0.35)
+	z-index -1
+
+#video-bg > video
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index -1
+
+@supports (object-fit: cover)
+	#video-bg > video
+		width 100%
+		height calc(100vh - 90px)
+		object-fit cover
+
+
+.main
+	height 100vh
+	padding 5% 0
+	h2
+		margin 0
+		font-size 40px
+		margin-bottom 25px
+		@media (max-width: 420px)
+			font-size 32px
+			margin-bottom 15px
+			padding-left 15px
+
+
+
+
+.main-section__head
+	position relative
+	display flex
+	flex-direction column
+	height 100%
+	align-items flex-start
+	justify-content center
+	@media (max-width: 420px)
+		align-items center
+		justify-content flex-end
+		padding 7%
+	.btn-primary
+		@media (max-width: 420px)
+			width 100%
+	
+.main-section__social
+	position absolute
+	top 50%
+	right 0
+	transform translateY(-50%)
+	display flex
+	flex-direction column
+	@media (max-width: 420px)
+		top 5%
+		right 50%
+		transform translateX(50%)
+		flex-direction row
+		width 65%
+		justify-content space-between
+	&-item
+		color rgba(255, 255, 255, 0.8)
+		display inline-block
+		height 30px
+		width 30px
+		transition .2s ease-out
+		position relative
+		@media (max-width: 420px)
+			height 25px
+			width 25px
+		svg
+			position relative
+			z-index 1
+		&-link
+			border-radius 50%
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			display inline-block
+			background-color #fff
+			height 0
+			width 0
+			z-index -1
+			transition .2s linear
+		&:hover &-link
+			height 50px
+			width 50px
+			@media (max-width: 420px)
+				height 40px
+				width 40px
+		&:not(:last-of-type)
+			margin-right 5%
+			margin-bottom 40px
+			@media (max-width: 420px)
+				margin-bottom 0
+
+.main-head
+	color #fff
+	font-size 67px
+	font-weight 800
+	text-transform uppercase
+	margin-top 0
+	margin-bottom 10px
+	@media (max-width: 420px)
+		font-size 36px
+		text-align center
+		margin-bottom 0
+	&--text
+		color #fff
+		font-size 34px
+		margin-bottom 100px
+		margin-top 25px
+		line-height 1.1
+		@media (max-width: 420px)
+			font-size 18px
+			text-align center
+			margin-bottom 10%
+			margin-top 8%
+			line-height 1.2
+
+
+.block-menu
+	display flex
+	align-items flex-start
+	justify-content space-between
+	margin-bottom 100px
+	&__item
+		background-color primaryBlueColor
+		width 31%
+		box-shadow 0 8px 15px -7px
+		padding-bottom 40px
+		transition .15s linear
+	&-img
+		background-color #f4e4df
+		height 250px
+		margin-bottom 40px
+	&-text
+		padding 0 45px
+		h2
+			color #fff
+			font-size 30px
+			font-weight 600
+			line-height 1.2
+			margin-bottom 40px
+			min-height 72px
+	& .is-active
+	&:hover
+		box-shadow: 0 10px 30px -16px
+		transform translateY(-7px)

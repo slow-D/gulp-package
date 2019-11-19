@@ -1,0 +1,162 @@
+.main
+	position relative
+	padding 0
+	.col
+		padding-top 5%
+	h3
+		margin 0
+#project
+	overflow hidden
+	h2
+		position relative
+		text-transform uppercase
+		font-weight 700
+		color #fff
+		background-color primaryBlueColor
+		display inline-block
+		padding-y 15px
+		padding-right 20px
+		margin 0
+		z-index 1
+		@media (max-width: 420px)
+			font-size 22px
+		&:before
+			content ''
+			position absolute
+			top 0
+			left -100%
+			height 100%
+			width 200%
+			background-color inherit
+			z-index -1
+.projects
+	height 100%
+	position absolute
+	top 0
+	left 0
+	width 100%
+	.col
+		height 100%
+		position relative
+	&-item
+		position relative
+		height 100vh
+		&.show .projects-bg
+			animation scalebg 10s linear
+		&.show .projects-descripton
+			opacity 1
+			transform translateY(0px)
+	&-bg
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background-repeat no-repeat
+		background-size 100% auto
+		background-position center
+		@media (max-width: 420px)
+			background-size cover
+	&-descripton
+		position absolute
+		bottom 0
+		right 0
+		background-color rgba(28, 50, 91, 0.7)
+		padding 25px 45px
+		color #fff
+		max-width 50%
+		opacity 0
+		transform translateY(20px)
+		transition .4s linear .5s
+		@media (max-width: 420px)
+			max-width 100%
+			width 100%
+			padding 15px
+		h3
+			margin 0
+			margin-bottom 10px
+			color inherit
+			font-size 24px
+			font-weight 600
+			@media (max-width: 420px)
+				font-size 18px
+		p:last-of-type
+			margin-top 5px
+			margin-bottom 25px
+		.btn-primary
+			display inline-flex
+
+
+
+
+.siema-control
+	position absolute
+	color #b8b4bb
+	top 55%
+	transform translateY(-50%)
+	height 50px
+	width 50px
+	background-color transparent
+	cursor pointer
+	z-index 10
+	border 2px solid
+	border-radius 50%
+	padding 10px
+	transition color .2s linear, background-color .2s linear
+	@media (max-width: 420px)
+		display none
+	&:hover
+		color primaryBlueColor
+		background-color #fff
+	&--prev
+		left 2.5%
+	&--next
+		right 2.5%
+		svg
+			transform rotate(180deg)
+	svg
+		width 100%
+
+
+.slider-num
+	position absolute
+	color #fff
+	top 85%
+	font-size 34px
+	&--current
+		color orange
+		font-size 72px
+		font-weight 600
+		@media (max-width: 420px)
+			font-size 52px
+	@media (max-width: 420px)
+		top 91%
+		right 7%
+		font-size 24px
+
+	
+.lotte
+	background-image url(pathImg'/images/projects/lotte.jpg')
+.gimn
+	background-image url(pathImg'/images/projects/gimn.jpg')
+.ekspo
+	background-image url(pathImg'/images/projects/ekspo.jpg')
+.radisson
+	background-image url(pathImg'/images/projects/radisson.jpg')
+.lider
+	background-image url(pathImg'/images/projects/lider.jpg')
+.darvin
+	background-image url(pathImg'/images/projects/darvin.jpg')
+.anderson
+	background-image url(pathImg'/images/projects/anderson.jpg')
+.bmw
+	background-image url(pathImg'/images/projects/bmw.jpg')
+.showroom
+	background-image url(pathImg'/images/projects/showroom.jpg')
+.jetbrain
+	background-image url(pathImg'/images/projects/jetbrain.jpg')
+	
+
+@keyframes scalebg
+	to
+		transform scale(1.1)

@@ -1,0 +1,164 @@
+.sale-wrap
+	display flex
+	flex-direction column
+	justify-content center
+	height 100%
+	
+.word-perc
+	border-radius 50%
+	position absolute
+	height 80px
+	width 80px
+	background-color rgba(255, 255, 255, 0.4)
+	top 7%
+	left 50%
+	z-index 1
+	&:before
+	&:after
+		display inherit
+		border-radius inherit
+		content ''
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+	&:before
+		height 60px
+		width 60px
+		background-color rgba(255, 255, 255, 0.7)
+		z-index 0
+	&:after
+		display flex
+		align-items center
+		justify-content center
+		font-size 32px
+		content '%'
+		background-color #ecd1ad
+		height 45px
+		width 45px
+
+.sale-change
+	color #c1904d
+	text-transform uppercase
+	font-weight 600
+
+.sale-block
+	width 100%
+	height 500px
+	background-color #1c325b
+	position relative
+	&:before
+		content ''
+		position absolute
+		height 100%
+		left 0
+		top 0
+		width 100%
+		background-image url(pathImg'/images/sale-block.png')
+		background-repeat no-repeat
+		background-size auto 100%
+		background-position left
+	&__head
+		position absolute
+		right 0
+		top 0
+		height 100%
+		width 38%
+		padding-top 6%
+		h3
+			color #fff
+			font-size 32px
+			margin-bottom 30px
+			
+
+.sale-check-form
+	display flex
+	flex-direction column
+	label
+		cursor pointer
+		font-weight 600
+		margin-bottom 0
+		color #fff
+		display flex
+		align-items center
+		&:not(:last-of-type)
+			margin-bottom 18px
+	.radio-btn
+		margin-right 8px
+		width 15px
+		height 15px
+			
+
+.login-input
+	border none
+	border-radius 5px
+	box-sizing border-box
+	display inline-block
+	font-size 18px
+	padding 10px 5%
+	width 100%
+	box-shadow 0 0 0 0
+	transition box-shadow .15s ease-out
+	outline none
+	color #000
+	&:focus
+		box-shadow 0 0 0px 2px primaryOrangeColor
+	&--radio
+		display none
+	&:checked + .radio-btn
+		&:before
+			width 6px
+		&:after
+			width 10px
+
+.radio-btn
+	position relative
+	border-radius 4px
+	width 12px
+	height 12px
+	background-color #fff
+	display inline-block
+	&:before
+	&:after
+		content ''
+		display inline-block
+		position absolute
+		background-color #000
+		top 50%
+		left 50%
+		transition width 100ms ease-out
+	&:before
+		height 2px
+		width 0
+		transform translate(-85%, 31%) rotate(45deg)
+	&:after
+		height 2px
+		width 0
+		transform translate(-36%, -40%) rotate(-45deg)
+
+.login-label
+	font-size 16px
+	display inline-block
+	margin-bottom 10px
+	
+
+.form-sale
+	display flex
+	justify-content space-between
+	position absolute
+	width 100%
+	padding 0 5%
+	bottom 14%
+	&-btn
+		border-radius 25px
+		border 1px solid #ff9008
+		outline none
+		font-size 18px
+		font-weight 600
+		text-align center
+		&::placeholder
+			font-size 18px
+			font-weight 600
+			text-align center
+	.btn-primary
+		border none

@@ -1,23 +1,197 @@
-.modal
+primaryBlueColor = #1c325b
+primaryGoldColor = #c1904d
+primaryOrangeColor = #fb8c00
+grayColor = #9e9e9e
+
+.modalLogin
+    position fixed
+    top 0
+    left 0
+    height 100%
     width 100%
-    max-width 600px
-    display inline-block
-    background-color white
-    overflow hidden
-    position relative
-    cursor default
-    vertical-align middle
-    white-space normal
-    text-align left
-    margin-y 50px
-    box-shadow 0px 0px 20px rgba(#000, 0.5)
-    &_wide
-        +above(sm)
-            max-width 1160px
-    &__close
-        z-index 100
-        cross 1px #c4c4c4 28px 28px 28px 28px
+    z-index 100
+  
+    transition visibility 0s linear 0.1s, opacity 0.3s ease
+    opacity 0
+    visibility hidden
+    @media (max-width: 420px)
+        overflow auto
+    &.open
+        opacity 1
+        visibility visible
+        transition-delay 0s
+    & .modalLogin-inner
+        opacity 1
+        transform translate(-50%,-50%)
+        @media (max-width: 420px)
+            transform translate(0%,0%)
+    & .modalLogin-overlay
+        opacity 1
+    &-overlay
+        background-color rgba(0, 0, 0, 0.75)
+        height 100%
+        width 100%
+        opacity 0
+        transition .1s linear
+    &-close
         position absolute
-        right 10px
         top 10px
+        right 10px
+        background-color transparent
+        border none
+        outline none
+        height 20px
+        width 20px
+        padding 0
+        &--wrap-line
+            position relative
+            height 100%
+            width 100%
+            &:before
+            &:after
+                content ''
+                border-radius 1px
+                position absolute
+                display inline-block
+                height 2px
+                width 100%
+                background-color #000
+                top 50%
+                left 0
+                transform-origin center
+                    @media (max-width: 420px)
+                        background-color #fff
+            &:before
+                transform translateY(-50%) rotate(45deg)
+            &:after
+                transform translateY(-50%) rotate(-45deg)
+    &-inner
+        border-radius 10px
+        background-color primaryBlueColor
+        box-shadow 0 5px 8px -1px
+        overflow hidden
+        position absolute
+        top 50%
+        left 50%
+        min-height 90%
+        width 50%
+        transform translate(-50%,-40%)
+        transition .2s ease-out
+        opacity 0
+        display flex
+        @media (max-width: 420px)
+            border-radius 0
+            min-width 100%
+            min-height 100%
+            top 0
+            left 0
+            transform translate(0%,-10%)
+        & > div
+            width 50%
+            @media (max-width: 420px)
+                width 100%
+        &__content
+            background-color transparent
+            padding 5% 5%
+        &__bg-img
+            background-image url('../images/lk-form.jpg')
+            background-size auto 100%
+            background-repeat no-repeat
+            background-position center
+            @media (max-width: 420px)
+                display none
+      
+.tabs
+    display flex
+    align-items center
+    color #fff
+    font-size 22px
+    margin-bottom 12%
+    list-style none
+    &__item
         cursor pointer
+        text-transform uppercase
+        &.active
+            color primaryGoldColor
+    &--content
+        display none
+        &.active
+            display block
+
+.form-login
+    color #fff
+    &--row
+        display flex
+        flex-direction column
+        margin-bottom 10%
+
+.work-design-wrap
+    display flex
+    flex-flow row wrap
+    label
+        cursor pointer
+        font-weight 600
+        margin-bottom 0
+        &:nth-child(n+3)
+            margin-top 10px
+        &:not(:last-of-type)
+            margin-right 15px
+
+.login-input
+    border none
+    border-radius 5px
+    box-sizing border-box
+    display inline-block
+    font-size 18px
+    padding 10px 5%
+    width 100%
+    box-shadow 0 0 0 0
+    transition box-shadow .15s ease-out
+    outline none
+    color #000
+    &:focus
+        box-shadow 0 0 0px 2px primaryOrangeColor
+    &--radio
+        display none
+        &:checked + .radio-btn
+            &:before
+                width 6px
+            &:after
+                width 10px
+
+.radio-btn
+    position relative
+    border-radius 4px
+    width 12px
+    height 12px
+    background-color #fff
+    display inline-block
+    &:before
+    &:after
+        content ''
+        display inline-block
+        position absolute
+        background-color #000
+        top 50%
+        left 50%
+        transition width 100ms ease-out
+    &:before
+        height 2px
+        width 0
+        transform translate(-85%, 31%) rotate(45deg)
+    &:after
+        height 2px
+        width 0
+        transform translate(-36%, -40%) rotate(-45deg)
+  
+.login-label
+    font-size 16px
+    display inline-block
+    margin-bottom 10px
+  
+.small-text
+    color grayColor
+    line-height 1.3
+    margin-top 5px
+    font-size 13px
+  

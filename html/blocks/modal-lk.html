@@ -1,0 +1,101 @@
+<div id="modal-lk" class="modalLogin" role="dialog">
+    <div class="modalLogin-overlay"></div>
+    <div class="modalLogin-inner">
+      <div class="modalLogin-inner__content">
+        <ul class="tabs">
+          <li class="tabs__item active">Вход</li>/
+          <li class="tabs__item">Регистрация</li>
+        </ul>
+        <div class="tabs--content active">
+          <form action="" class="form-login">
+            
+            <div class="form-login--row">
+              <label for="login-nick" class="login-label">Логин:</label>
+              <input id="login-nick" class="login-input" type="text"/>
+              <div class="small-text">
+                Укажите логин, email или номер телефона, которые вы использовали при регистрации.
+              </div>
+            </div>
+            
+            <div class="form-login--row">
+              <label for="login-pass" class="login-label">Пароль:</label>
+              <input id="login-pass" class="login-input" type="password"/>
+              <div class="small-text">
+                Если вы не помните свой пароль - просто оставьте это поле пустым и вы получите новый, вместе со ссылкой на активацию.
+              </div>
+            </div>
+            
+            <a href="" class="btn-primary">Вход</a>
+            
+          </form>
+        </div>
+        
+        <div class="tabs--content">
+          <form action="" class="form-login">
+            
+            <div class="form-login--row">
+              <label for="login-name" class="login-label">Имя:</label>
+              <input id="login-name" class="login-input" type="text"/>
+              <div class="small-text">
+                Ваше имя, для отображения на сайте.
+              </div>
+            </div>
+            
+            <div class="form-login--row">
+              <label class="login-label">Род деятельности:</label>
+              <div class="work-design-wrap">
+                <label for="work-design">
+                  <input class="login-input--radio" type="radio" id="work-design" name="working">
+                  <div class="radio-btn"></div>
+                  Архитектор/дизайнер
+                </label>
+                <label for="work-diler">
+                  <input class="login-input--radio" type="radio" id="work-diler" name="working">
+                  <div class="radio-btn"></div>
+                  Дилер
+                </label>
+                <label for="work-zastroi">
+                  <input class="login-input--radio" type="radio" id="work-zastroi" name="working">
+                  <div class="radio-btn"></div>
+                  Застройщик
+                </label>
+                <label for="work-person">
+                  <input class="login-input--radio" type="radio" id="work-person" name="working">
+                  <div class="radio-btn"></div>
+                  Собственник
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-login--row">
+              <label for="login-mail" class="login-label">Email:</label>
+              <input id="login-mail" class="login-input" type="email"/>
+              <div class="small-text">
+                На указанный email придёт письмо со ссылкой для активации.
+              </div>
+            </div>
+            
+            <div class="form-login--row">
+              <label for="login-tel" class="login-label">Телефон:</label>
+              <input id="login-tel" class="login-input" type="tel"/>
+              <div class="small-text">
+                Просто номер вашего сотового телефона.
+              </div>
+            </div>
+            
+<!--             <div class="form-login--row">
+              <label for="login-comment" class="login-label">Комментарии:</label>
+              <input id="login-comment" class="login-input" type="text"/>
+            </div> -->
+            
+            <a href="" class="btn-primary">Зарегистрироваться</a>
+            
+          </form>
+        </div>
+      </div>
+      <div class="modalLogin-inner__bg-img"></div>
+      <button class="modalLogin-close" title="Закрыть">
+        <div class="modalLogin-close--wrap-line"></div>
+      </button>
+    </div>
+  </div>
