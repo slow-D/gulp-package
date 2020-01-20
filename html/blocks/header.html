@@ -1,8 +1,9 @@
-<header class="header @@class">
+<header class="header header--ny">
 <div class="col row-flex">
 
   <div class="header__logo">
-    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="722 89.1 1041.3 204.5" enable-background="new 722 89.1 1041.3 204.5" xml:space="preserve">
+    <img src="@@path/images/logo-ny.png" alt="Новогодний логотип ФОЛДИН">
+<!--     <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="722 89.1 1041.3 204.5" enable-background="new 722 89.1 1041.3 204.5" xml:space="preserve">
 
       <polygon fill="#C19047" points="912.1,192.1 862.4,207.9 912.1,282.5 					"/>
       <polygon fill="#C19047" points="843.6,179 912.1,154 912.1,115.9 820.5,148 					"/>
@@ -91,17 +92,47 @@
         c18.7,0,32.2,1.2,40.3,3.7c10.8,3.3,19.3,9.4,25.4,18.3s9.1,19.7,9.1,32.2c0,11.9-2.8,22.1-8.4,30.4c-5.6,8.3-13.3,14-23.1,17.2
         c-7,2.3-19.5,3.4-37.4,3.4h-15.1v-86l-12.5-14.3v112.6h41.4c16.3,0,28.9-2.4,37.8-7.1c9-4.7,16.3-12,21.9-21.9
         c5.6-9.9,8.5-21.4,8.5-34.4C1415.4,144.4,1411.8,131.4,1404.8,120.4z"/>
-    </svg>
+    </svg> -->
   </div>
 
-  <nav class="header__menu">
-    <a class="header__menu-item" href="#">Стоимость</a>
-    <a class="header__menu-item header__menu-item--arrow" href="#">Продукция</a>
-    <a class="header__menu-item" href="#">Видео</a>
-    <a class="header__menu-item" href="#">Проекты</a>
-    <a class="header__menu-item header__menu-item--arrow" href="#">О компании</a>
-    <a class="header__menu-item header__menu-item--arrow" href="#">Контакты</a>
-  </nav>
+  <ul class="header__menu">
+    <li class="header__menu-item header__menu-item--arrow">
+      <a href="#">Продукция</a>
+      <ul class="menu-inside">
+        <li class="menu-inside__item"><a href="#">Раздвижные перегородки NORMA</a></li>
+        <li class="menu-inside__item"><a href="#">Раздвижные стены NORMA</a></li>
+        <li class="menu-inside__item"><a href="#">Раздвижные стены PARTHOS</a></li>
+      </ul>
+    </li>
+    <li class="header__menu-item js-calc-to"><a href="#">Стоимость</a></li>
+    <li class="header__menu-item"><a href="#">Видео</a></li>
+    <li class="header__menu-item"><a href="#">Проекты</a></li>
+    <li class="header__menu-item header__menu-item--arrow">
+      <a href="#">О компании</a>
+      <ul class="menu-inside">
+        <li class="menu-inside__item"><a href="#">Наша история</a></li>
+        <li class="menu-inside__item"><a href="#">Наша миссия</a></li>
+        <li class="menu-inside__item"><a href="#">Отзывы</a></li>
+        <li class="menu-inside__item"><a href="#">Преимущества продукции ФОЛДИН</a></li>
+        <li class="menu-inside__item"><a href="#">Как мы работаем</a></li>
+        <li class="menu-inside__item"><a href="#">Почему выбирают ФОЛДИН</a></li>
+        <li class="menu-inside__item"><a href="#">FAQ</a></li>
+      </ul>
+    </li>
+    <li class="header__menu-item header__menu-item--arrow">
+      <a href="#">Контакты</a>
+      <ul class="menu-inside">
+        <li class="menu-inside__item"><a href="#">Москва</a></li>
+        <li class="menu-inside__item"><a href="#">Санкт-Петербург</a></li>
+        <li class="menu-inside__item"><a href="#">Екатеринбург</a></li>
+        <li class="menu-inside__item"><a href="#">Смоленск</a></li>
+        <li class="menu-inside__item"><a href="#">Киров</a></li>
+        <li class="menu-inside__item"><a href="#">Краснодар</a></li>
+        <li class="menu-inside__item"><a href="#">Новосибириск</a></li>
+        <li class="menu-inside__item"><a href="#">Челябинск</a></li>
+      </ul>
+    </li>
+  </ul>
 
   <div class="header__contact row-flex">
 <!--     <div class="header__contact-person row-flex">
@@ -112,8 +143,8 @@
   </div>
 
   <div class="header__contacts">
-  	<a class="header__contacts-item" href="">info@foldin.ru</a>
-  	<a class="header__contacts-item" href="">+7 800 775-26-91</a>
+  	<a class="header__contacts-item" href="mailto:info@foldin.ru">info@foldin.ru</a>
+  	<a class="header__contacts-item" href="tel:+78007752691">8 (800) 775-26-91</a>
   </div>
 
   <div class="header__contact--mobile-icons">

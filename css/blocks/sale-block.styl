@@ -5,6 +5,7 @@
 	height 100%
 	
 .word-perc
+	display none
 	border-radius 50%
 	position absolute
 	height 80px
@@ -36,6 +37,8 @@
 		background-color #ecd1ad
 		height 45px
 		width 45px
+	@media (max-width: 1280px)
+		display none
 
 .sale-change
 	color #c1904d
@@ -47,6 +50,13 @@
 	height 500px
 	background-color #1c325b
 	position relative
+	@media (max-width: 1280px)
+		height auto
+		padding 10% 7%
+		background-image url(pathImg'/images/bg-sale-mobile.png')
+		background-repeat no-repeat
+		background-size 40%
+		background-position 100% 32%
 	&:before
 		content ''
 		position absolute
@@ -54,26 +64,54 @@
 		left 0
 		top 0
 		width 100%
-		background-image url(pathImg'/images/sale-block.png')
+		background-image url(pathImg'/images/sale-block-alt.png')
 		background-repeat no-repeat
-		background-size auto 100%
-		background-position left
+		background-size 33%
+		background-position 25% 10%
+		@media (max-width: 1280px)
+			display none
 	&__head
 		position absolute
 		right 0
 		top 0
 		height 100%
 		width 38%
-		padding-top 6%
+		padding-top 7%
 		h3
 			color #fff
 			font-size 32px
 			margin-bottom 30px
+			@media (max-width: 1280px)
+				display none
+		@media (max-width: 1280px)
+			position relative
+			height auto
+			width 100%
+			padding-top 0
+			margin-bottom 35px
+		&--mobile
+			display none
+			margin-bottom 35px
+			h4
+				font-weight normal
+				font-size 30px
+				color primaryGoldColor
+				margin 0
+				margin-bottom 10px
+				text-transform uppercase
+			p
+				color #ffffff
+				font-weight normal
+				font-size 22px
+			@media (max-width: 1280px)
+				display block
 			
 
 .sale-check-form
 	display flex
 	flex-direction column
+	@media (max-width: 1280px)
+		width 100%
 	label
 		cursor pointer
 		font-weight 600
@@ -83,6 +121,8 @@
 		align-items center
 		&:not(:last-of-type)
 			margin-bottom 18px
+			@media (max-width: 1280px)
+				margin-bottom 30px
 	.radio-btn
 		margin-right 8px
 		width 15px
@@ -149,6 +189,9 @@
 	width 100%
 	padding 0 5%
 	bottom 14%
+	& > *:not(:last-child)
+		@media (max-width: 1280px)
+			margin-bottom 15px
 	&-btn
 		border-radius 25px
 		border 1px solid #ff9008
@@ -160,5 +203,11 @@
 			font-size 18px
 			font-weight 600
 			text-align center
-	.btn-primary
-		border none
+		@media (max-width: 1280px)
+			height 50px
+	@media (max-width: 1280px)
+		flex-direction column
+		position relative
+		bottom 0
+		padding 0
+	

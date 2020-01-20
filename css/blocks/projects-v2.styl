@@ -3,8 +3,6 @@
 	padding 0
 	.col
 		padding-top 5%
-	h3
-		margin 0
 #project
 	overflow hidden
 	h2
@@ -18,8 +16,11 @@
 		padding-right 20px
 		margin 0
 		z-index 1
-		@media (max-width: 420px)
-			font-size 22px
+		@media (max-width: 1280px)
+			font-size 30px
+			font-weight 400
+			text-transform none
+			padding-left 7%
 		&:before
 			content ''
 			position absolute
@@ -29,8 +30,11 @@
 			width 200%
 			background-color inherit
 			z-index -1
+			@media (min-width: 1919px)
+				width 250%
+				left -171%
 .projects
-	height 100%
+	height 100vh
 	position absolute
 	top 0
 	left 0
@@ -41,8 +45,9 @@
 	&-item
 		position relative
 		height 100vh
+		overflow hidden
 		&.show .projects-bg
-			animation scalebg 10s linear
+			animation scalebg 10s linear forwards
 		&.show .projects-descripton
 			opacity 1
 			transform translateY(0px)
@@ -53,10 +58,8 @@
 		width 100%
 		height 100%
 		background-repeat no-repeat
-		background-size 100% auto
-		background-position center
-		@media (max-width: 420px)
-			background-size cover
+		background-size cover
+		background-position center center
 	&-descripton
 		position absolute
 		bottom 0
@@ -68,17 +71,17 @@
 		opacity 0
 		transform translateY(20px)
 		transition .4s linear .5s
-		@media (max-width: 420px)
+		@media (max-width: 1280px)
 			max-width 100%
 			width 100%
-			padding 15px
+			padding 7%
 		h3
 			margin 0
 			margin-bottom 10px
 			color inherit
 			font-size 24px
 			font-weight 600
-			@media (max-width: 420px)
+			@media (max-width: 1280px)
 				font-size 18px
 		p:last-of-type
 			margin-top 5px
@@ -124,37 +127,37 @@
 	top 85%
 	font-size 34px
 	&--current
-		color orange
+		color primaryGoldColor
 		font-size 72px
-		font-weight 600
-		@media (max-width: 420px)
+		font-weight 400
+		@media (max-width: 1280px)
 			font-size 52px
-	@media (max-width: 420px)
-		top 91%
+	@media (max-width: 1280px)
+		top 87.5%
 		right 7%
 		font-size 24px
 
 	
-.lotte
-	background-image url(pathImg'/images/projects/lotte.jpg')
-.gimn
-	background-image url(pathImg'/images/projects/gimn.jpg')
-.ekspo
-	background-image url(pathImg'/images/projects/ekspo.jpg')
-.radisson
-	background-image url(pathImg'/images/projects/radisson.jpg')
-.lider
-	background-image url(pathImg'/images/projects/lider.jpg')
-.darvin
-	background-image url(pathImg'/images/projects/darvin.jpg')
-.anderson
-	background-image url(pathImg'/images/projects/anderson.jpg')
-.bmw
-	background-image url(pathImg'/images/projects/bmw.jpg')
-.showroom
-	background-image url(pathImg'/images/projects/showroom.jpg')
-.jetbrain
-	background-image url(pathImg'/images/projects/jetbrain.jpg')
+// .lotte
+// 	background-image url(pathImg'/images/projects/lotte-1920.jpg')
+// .gimn
+// 	background-image url(pathImg'/images/projects/gimn-1920.jpg')
+// .ekspo
+// 	background-image url(pathImg'/images/projects/ekspo-1920.jpg')
+// .radisson
+// 	background-image url(pathImg'/images/projects/radisson-1920.jpg')
+// .lider
+// 	background-image url(pathImg'/images/projects/lider-1920.jpg')
+// .darvin
+// 	background-image url(pathImg'/images/projects/darvin-1920.jpg')
+// .anderson
+// 	background-image url(pathImg'/images/projects/anderson-1920.jpg')
+// .bmw
+// 	background-image url(pathImg'/images/projects/bmw-1920.jpg')
+// .showroom
+// 	background-image url(pathImg'/images/projects/showroom-1920.jpg')
+// .jetbrain
+// 	background-image url(pathImg'/images/projects/jetbrain-1920.jpg')
 	
 
 @keyframes scalebg

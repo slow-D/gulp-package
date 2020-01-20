@@ -1,21 +1,61 @@
 #use-area
 	background-color primaryBlueColor
+	@media (max-width: 1280px)
+		background-color #ffffff
+		height auto
 	.col
 		height 100%
+		@media (max-width: 1280px)
+			padding 10% 7%
+		@media (min-width: 1919px)
+			padding-top 7%
 	h2
 		color #fff
 		width 50%
 		margin 0
 		font-weight 700
+		@media (max-width: 1280px)
+			color #000000
+			font-size 30px
+			font-weight 400
+			width 100%
+			padding 0
+			line-height 1
+			margin-bottom 35px
 .area
 	color #fff
-	height 550px
+	height 600px
 	max-width 1280px
-	background-image url(pathImg'/images/use-bg.png')
+	// background-image url(pathImg'/images/use-bg-1.png')
 	background-repeat no-repeat
-	background-size contain
+	background-size 100% 100%
 	background-position left
 	position relative
+	@media (max-width: 1280px)
+		background-image none !important
+		height auto
+	@media (min-width: 1919px)
+		max-width 100%
+		height 700px
+	&-text
+		position absolute
+		left 0
+		top 7%
+		font-size 20px
+		font-weight 400
+		line-height 1.3
+		&:before
+			content '/'
+			position absolute
+			top 0
+			left -14px
+			font-size inherit
+			font-weight inherit
+			@media (min-width: 1919px)
+				top 0
+				left -24px
+		@media (max-width: 1280px)
+			display none
 	&-item
 		position absolute
 		overflow hidden
@@ -27,6 +67,22 @@
 		font-weight 500
 		color #fff
 		text-decoration none
+		@media (max-width: 1280px)
+			position relative
+			top 0
+			left 0
+			width auto
+			height auto
+			padding 0
+			flex-direction row
+			color #000000
+			align-items center
+		&:not(:last-of-type)
+			@media (max-width: 1280px)
+				margin-bottom 20px
+		& .area-item__wrap
+			@media (max-width: 1280px)
+				background-image none !important
 		&__wrap
 			position absolute
 			top 0
@@ -46,11 +102,17 @@
 				left 0
 				height 100%
 				width 100%
-				background-color rgba(0, 0, 0, 0.3)
+				background-image linear-gradient(0deg, rgba(0,0,0,0.7987570028011204) 0%, rgba(0,0,0,0) 50%)
+				@media (max-width: 1280px)
+					display none
 			&-icon
 				position relative
 				width 40px
 				height 40px
+				color #ecd1ad
+				@media (max-width: 1280px)
+					color primaryBlueColor
+					margin-right 15px
 				svg
 					display inline-block
 					width 100%
@@ -62,73 +124,112 @@
 		&.is-active .area-item__wrap
 		&:hover .area-item__wrap
 			opacity 1
+		&.is-active .area-item__wrap-icon
+		&:hover .area-item__wrap-icon
+			color #fff
+			@media (max-width: 1280px)
+				color primaryBlueColor
+		&:hover .area-item__wrap-icon
+			@media (max-width: 1280px)
+				color primaryGoldColor
+		&:hover .area-item__wrap-text
+			@media (max-width: 1280px)
+				font-weight 600
+				text-decoration underline
 		&-1
-			top 29.5%
-			left 10.8%
-			height 35%
-			width 21%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/flats.jpg')	
+			top 27.3%
+			left 12.6%
+			height 32.8%
+			width 25%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/hall.jpg')
+			@media (min-width: 1919px)
+				left 12.6%
+				width 24.9%	
 		&-2
-			top 67.8%
-			left 5.6%
-			height 22%
-			width 12.5%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/sport-1.jpg')
+			top 63%
+			left 3.1%
+			height 34%
+			width 18.1%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/sport-1.jpg')
+			@media (min-width: 1919px)
+				left 3.1%
+				width 18.2%
 		&-3
-			top 67.8%
-			left 19.6%
-			height 29%
-			width 12.3%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/school.jpg')
+			top 63.2%
+			left 22.9%
+			height 27.2%
+			width 14.7%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/school.jpg')
+			@media (min-width: 1919px)
+				left 22.9%
+				width 14.6%
 		&-4
-			top 35.6%
-			left 33.4%
-			height 57.3%
-			width 13.7%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/office.jpg')	
+			top 33%
+			left 39.2%
+			height 53.6%
+			width 16.4%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/office.jpg')
+			@media (min-width: 1919px)
+				left 39.2%
+				width 16.2%
 		&-5
-			top 10.2%
-			left 46.8%
-			height 21.9%
-			width 18.6%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/rest-1.jpg')
+			top 9.5%
+			left 55%
+			height 20.5%
+			width 21.9%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/rest-1.jpg')
+			@media (min-width: 1919px)
+				width 21.9%
 		&-6
 			top 3%
-			left 66.8%
-			height 29.2%
-			width 15.1%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/hall.jpg')
+			left 78.6%
+			height 27.2%
+			width 17.8%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/flats.jpg')
+			@media (min-width: 1919px)
+				left 78.7%
+				width 17.5%
 		&-7
-			top 35.5%
-			left 48.6%
-			height 28.9%
-			width 19.9%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/studio.jpg')
+			top 33.1%
+			left 57.2%
+			height 27%
+			width 23.4%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/studio.jpg')
+			@media (min-width: 1919px)
+				left 57.1%
 		&-8
-			top 35.5%
-			left 70%
-			height 28.8%
-			width 11.8%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/kindergarden-1.jpg')	
+			top 33%
+			left 82.3%
+			height 27%
+			width 14%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/kindergarden-1.jpg')
+			@media (min-width: 1919px)
+				left 82.1%
+				width 14.4%
 		&-9
-			top 67.8%
-			left 48.6%
-			height 28.9%
-			width 15%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/hotel.jpg')
+			top 63.2%
+			left 57.2%
+			height 27.1%
+			width 17.6%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/hotel.jpg')
+			@media (min-width: 1919px)
+				left 57.1%
+				width 17.8%
 		&-10
-			top 67.8%
-			left 65.1%
-			height 21.8%
-			width 18.6%
-			.area-item__wrap
-				background-image url(pathImg'/images/area/concert-1.jpg')
+			top 63.1%
+			left 76.5%
+			height 33.9%
+			width 22%
+			// .area-item__wrap
+			// 	background-image url(pathImg'/images/area/concert-1.jpg')
+			@media (min-width: 1919px)
+				width 21.9%

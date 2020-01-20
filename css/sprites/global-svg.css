@@ -34,6 +34,11 @@
          height: 16.00003125em;
      }
 
+   .icon.icon-factory {
+         width: 16em;
+         height: 16em;
+     }
+
    .icon.icon-logo-foldin {
          width: 31.25em;
          height: 6.137160280418708em;
@@ -54,9 +59,19 @@
          height: 16em;
      }
 
+   .icon.icon-place {
+         width: 16em;
+         height: 16em;
+     }
+
    .icon.icon-rocking-horse {
          width: 14.18225em;
          height: 14.18225em;
+     }
+
+   .icon.icon-russia {
+         width: 16em;
+         height: 16em;
      }
 
    .icon.icon-sofa {
@@ -64,7 +79,32 @@
          height: 15.357625em;
      }
 
+   .icon.icon-statistics {
+         width: 15.5em;
+         height: 15.5em;
+     }
+
+   .icon.icon-team {
+         width: 15.5em;
+         height: 15.5em;
+     }
+
+   .icon.icon-team-people {
+         width: 16em;
+         height: 16em;
+     }
+
    .icon.icon-tribune {
          width: 16.00003125em;
          height: 16.00003125em;
+     }
+
+   .icon.icon-up-arrow {
+         width: 14.12021875em;
+         height: 14.1201875em;
+     }
+
+   .icon.icon-vegan {
+         width: 16em;
+         height: 16em;
      }

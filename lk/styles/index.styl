@@ -1,0 +1,382 @@
+@import "media.styl"
+@import "modal.styl"
+
+primaryBlueColor = #1c325b
+// pathImg = '/img'
+pathImg = '/assets/lk/images'
+
+.hidden
+  display none
+  
+.no-scroll
+  overflow hidden
+  touch-action none
+
+.visible
+  animation visible .5s .4s forwards
+  &--text
+    animation visible-text .5s .6s forwards
+  &--gradient
+    animation visible-gradient 1s ease-out .7s forwards
+  
+.avatar
+  color #363739
+  height 40px
+  width 40px
+  border-radius 50%
+  background-color #fff
+  // background-image url(pathImg/person.jpg)
+  background-size cover
+  background-repeat no-repeat
+  border 1px solid #363739
+  box-sizing border-box
+  padding-top 5px
+  display flex
+  justify-content center
+  
+.col
+  max-width 1280px
+  margin 0 auto
+.row-flex
+  display flex
+  align-items center
+  justify-content space-between
+
+.link
+  color #7f9edb
+  font-size 16px
+  
+svg
+  overflow auto
+  height 100%
+  width auto
+  fill currentColor
+
+.t-bold
+  color #ead9bb
+  font-size 20px
+  font-weight bold
+  line-height 1.5
+  margin-bottom 50px
+  opacity 0
+  transform translateY(30px)
+
+.btn-primary
+  color #363739
+  background-image linear-gradient(to right, #ff8e07, #ff9815, #ffa220, #ffac2b, #ffb536)
+  height 50px
+  padding 0 35px
+  font-size 18px
+  font-weight 600
+  text-decoration none
+  display table-cell
+  vertical-align middle
+  border-radius 25px
+  box-shadow 0 2px 7px -2px
+  transition .15s linear
+  border none
+  outline none
+  &:hover
+    color #363739
+    background-image linear-gradient(to right, #fff, #fff, #fff, #fff, #fff)
+    box-shadow 0 4px 10px -2px
+  &:active
+    box-shadow inset 0 0 10px -2px #000
+
+.menu-bg
+  // background-color red
+  height 100%
+  background-size auto 100%
+  background-repeat no-repeat
+  background-position center center
+  
+body
+  font-family "Montserrat", sans-serif
+  position relative
+main
+  background-color #fff
+
+.main-inside
+  padding-top 50px
+  padding-bottom 100px
+  @media (max-width: 420px)
+    padding 30px 15px
+  &__item
+    &-wrap
+      display flex
+      flex-flow row wrap
+      justify-content space-between
+      &-item
+        cursor pointer
+        width 19%
+        @media (max-width: 420px)
+          width 100%
+        &:nth-of-type(n+6)
+          margin-top 30px
+        &-img
+          position relative
+          margin-bottom 20px
+          width 200px
+          height 141px
+          display inline-block
+          &:after
+            content ''
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            background-color rgba(62, 92, 154, 0.2)
+        img
+          display inline-block
+          height 100%
+          width auto
+        figcaption
+          font-size 18px
+          font-weight 500
+          line-height 1.3
+    &:not(:last-of-type)
+      margin-bottom 50px
+    h1
+      font-size 42px
+      margin-bottom 40px
+      font-weight 300
+      @media (max-width: 420px)
+        font-size 32px
+        margin-bottom 25px
+    h2
+      color #363739
+      font-size 32px
+      font-weight 300
+      margin-bottom 25px
+      @media (max-width: 420px)
+        font-size 26px
+.header
+  background-color #fff
+  padding 20px 0
+  position relative
+  width 100%
+  &__contact--mobile
+    margin-top 15%
+    padding 0 5%
+    display flex
+    flex-direction column
+    align-items center
+    .header__contact-person
+      justify-content center
+      margin-bottom 15px
+    .header__menu-item
+      color #fff
+    &-icons
+      display none
+      align-items center
+      &-item
+        color primaryBlueColor
+        width 25px
+        height 25px
+        display inline-block
+        &:first-of-type
+          margin-right 15px
+        svg
+          width 100%
+  &--inside
+    box-shadow 0 2px 6px -4px
+  &__logo
+    height 50px
+    display inline-block
+  &__menu
+    margin-left 0
+    &-item
+      color #595959
+      font-size 18px
+      margin-right 35px
+      text-decoration none
+      transition color .15s ease-out
+      &:hover
+        color #ccc
+    &--mobile
+      display flex
+      flex-direction column
+      align-items center
+      padding-top 35px
+      &-item
+        color #fff
+        font-size 18px
+        text-decoration none
+        &:not(:last-of-type)
+          margin-bottom 25px
+  &__contact-person
+    margin-right 0
+    .header__menu-item
+      font-size 16px
+      margin-left 7px
+    
+.block-welcome
+  min-height 450px
+  background-image url(pathImg/welcome-1.png)
+  background-position 140%
+  background-size 70%
+  background-repeat no-repeat
+  position relative
+  z-index 2
+  margin-bottom 50px
+  padding-top 55px
+  @media screen and (min-width: 1920px)
+    background-position 120%
+    background-size 68%
+  @media screen and (min-width: 2199px)
+    background-position 113%
+    background-size 62%
+  @media screen and (min-width: 2299px)
+    background-position 101%
+    background-size 54%
+  &__overlay
+    content ''
+    // background rgb(132,193,253)
+    background-image linear-gradient(90deg, rgba(28, 50, 91, 1) 40%, rgba(28, 50, 91, 0) 90%)
+    background-size 300%
+    position absolute
+    top 0
+    left 0
+    height 100%
+    width 100%
+    z-index -1
+  
+.head--lk
+  color #fff
+  font-size 70px
+  font-weight 100
+  margin-bottom 50px
+  opacity 0
+  transform translateX(-50px)
+  
+.block-menu
+  display flex
+  align-items flex-start
+  justify-content space-between
+  margin-bottom 100px
+  &__item
+    background-color primaryBlueColor
+    width 31%
+    box-shadow 0 8px 15px -7px
+    padding-bottom 40px
+    transition .15s linear
+    &-img
+      background-color #f4e4df
+      height 250px
+      margin-bottom 40px
+    &-text
+      padding 0 45px
+      h2
+        color #fff
+        font-size 30px
+        font-weight 600
+        line-height 1.2
+        margin-bottom 40px
+        min-height 72px
+    & .is-active
+    &:hover
+      box-shadow: 0 10px 30px -16px
+      transform translateY(-7px)
+      
+#schema
+  background-image url(pathImg/architect.jpg)
+#catalog
+  background-image url(pathImg/catalog.png)
+#bim
+  background-image url(pathImg/bim.png)
+  
+.footer
+  background-color #fff
+  border-top 1px solid #cdcdcd
+  padding 35px 0
+  &__copy
+    color #6586c6
+    line-height 1.5
+  &__adress
+    color #595959
+    display flex
+    align-items flex-start
+    line-height 1.2
+    font-size 14px
+    svg
+      fill #6586c6
+      height 30px
+      width 30px
+      margin-right 7px
+  &__social
+    display flex
+    &-item
+      color #6586c6
+      display inline-block
+      height 25px
+      width 25px
+      &:not(:last-of-type)
+        margin-right 15px
+  &__mail
+    color #fb8c00
+    font-size 22px
+    a
+      color inherit
+.mobile-menu
+  position fixed
+  background-color primaryBlueColor
+  height calc(100vh - 70px)
+  top 70px
+  right -100%
+  width 100%
+  z-index 5
+  transition transform .2s ease-out
+  &--animate
+    transform translate(-100%)
+.mobile-menu-gamburg
+  display none
+  align-items center
+  justify-content center
+  &__wrap
+    position relative
+    height 20px
+    width 25px
+    &-line
+      background-color primaryBlueColor
+      height 2px
+      width 100%
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      transition width .2s ease-out
+    &:before
+    &:after
+      background-color primaryBlueColor
+      content ''
+      position absolute
+      height 2px
+      width 100%
+      transition transform .2s ease-out
+    &:before
+      top 0
+    &:after
+      bottom 0
+.mobile-menu-gamburg--close
+  .mobile-menu-gamburg__wrap
+    &-line
+      width 0
+    &:before
+      transform translateY(9px) rotate(45deg)
+    &:after
+      transform translateY(-9px) rotate(-45deg)
+      
+
+@keyframes visible
+  to
+    opacity 1
+    transform translateX(0)
+    
+@keyframes visible-text
+  to
+    opacity 1
+    transform translateY(0)
+    
+@keyframes visible-gradient
+  to
+    background-size 100%

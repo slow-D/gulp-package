@@ -1,0 +1,249 @@
+<section id="calc" class="main section calc scroll-section">
+
+  <form class="col calc-wrap">
+    
+
+    <div class="calc-wrap__item">
+      
+      <h2>Online калькулятор</h2>
+
+      <div class="calc-show lozad" data-background-image="@@path/images/karkas().png">
+        <img class="calc-show__item is-show lozad" data-src="@@path/images/norma-rw.png" alt="">
+        <img class="calc-show__item lozad" data-src="@@path/images/norma-rp.png" alt="">
+        <img class="calc-show__item lozad" data-src="@@path/images/parthos-rp.png" alt="">
+
+        <div class="abs-img abs-img--width"></div>
+        <div class="abs-img abs-img--height"></div>
+      </div>
+
+    </div>
+
+
+
+    <div class="calc-wrap__item calc-write">
+      
+      <div class="calc-write__item">
+        <h3 class="calc-write__item-head">Продукция</h3>
+
+        <div class="form-col aside-line">
+
+          <label for="pereg-norma" class="label-radio wall-btn">
+            <input id="pereg-norma" class="js-wall" type="radio" name="wall-name" data-min-height="2500" data-max-height="6000" data-min-width="2000" data-max-width="15000" checked>
+            <div class="label-radio__btn"></div>
+            Раздвижная перегородка НОРМА
+          </label>
+
+          <label for="wall-norma" class="label-radio wall-btn">
+            <input id="wall-norma" class="js-wall" type="radio" name="wall-name" data-min-height="2500" data-max-height="6000" data-min-width="2000" data-max-width="Infinity">
+            <div class="label-radio__btn"></div>
+            Раздвижная стена НОРМА
+          </label>
+
+          <label for="wall-parthos" class="label-radio wall-btn">
+            <input id="wall-parthos" class="js-wall" type="radio" name="wall-name" data-min-height="2500" data-max-height="17000" data-min-width="2000" data-max-width="Infinity">
+            <div class="label-radio__btn"></div>
+            Раздвижная стена PARTHOS
+            <div class="parthos-desc">Расчет для <strong>110 серии</strong> по курсу евро € - <strong><span id="euro"></span> ₽</strong></div>
+          </label>
+
+        </div>
+
+      </div>
+
+      <div class="calc-write__item">
+
+        <div class="form-row">
+          <div>
+            <h3 class="calc-write__item-head">Ширина (мм)</h3>
+          </div>
+          <div>
+            <h3 class="calc-write__item-head--mode">Высота (мм)</h3>
+          </div>
+        </div>
+
+        <div class="form-row aside-line">
+          
+          <div>
+            <input class="input-text js-square-width" type="number" min="0" step="10">
+          </div>
+
+          <div>
+            <input class="input-text js-square-height" type="number" min="0" step="10">
+          </div>
+
+        </div>
+
+        <div class="error"></div>
+
+      </div>
+
+      <div class="calc-write__item">
+        <h3 class="calc-write__item-head">Площадь стены (м<sup>2</sup>)</h3>
+        <div class="aside-line">
+          <input class="input-text input-text--big js-calc-square" type="text" value="Расчет проводится автоматически" disabled>
+        </div>
+      </div>
+
+      <div class="calc-write__item">
+        <h3 class="calc-write__item-head">Звукоизоляция (дБ)</h3>
+
+        <div class="aside-line">
+          
+          <div class="inside-db form-row is-show-db">
+            <label for="db40-np" class="label-radio">
+              <input class="input-db" id="db40-np" type="radio" name="db-septumN" value="13430" checked>
+              <div class="label-radio__btn"></div>
+              40 дБ
+            </label>
+
+            <label for="db44-np" class="label-radio">
+              <input class="input-db" id="db44-np" type="radio" name="db-septumN" value="15078">
+              <div class="label-radio__btn"></div>
+              44 дБ
+            </label>
+
+            <label for="db48-np" class="label-radio">
+              <input class="input-db" id="db48-np" type="radio" name="db-septumN" value="17372">
+              <div class="label-radio__btn"></div>
+              48 дБ
+            </label>
+          </div>
+
+
+          <div class="inside-db form-row">
+            <label for="db40-nw" class="label-radio">
+              <input class="input-db" id="db40-nw" type="radio" name="db-wallN" value="17159" checked>
+              <div class="label-radio__btn"></div>
+              40 дБ
+            </label>
+
+            <label for="db44-nw" class="label-radio">
+              <input class="input-db" id="db44-nw" type="radio" name="db-wallN" value="17857">
+              <div class="label-radio__btn"></div>
+              44 дБ
+            </label>
+
+            <label for="db48-nw" class="label-radio">
+              <input class="input-db" id="db48-nw" type="radio" name="db-wallN" value="18819">
+              <div class="label-radio__btn"></div>
+              48 дБ
+            </label>
+          </div>
+
+
+          <div class="inside-db inside-db--parthos form-row">
+            <label for="db37-pw" class="label-radio">
+              <input class="input-db" id="db37-pw" type="radio" name="db-wallP" value="554" checked>
+              <div class="label-radio__btn"></div>
+              37 дБ
+            </label>
+
+            <label for="db43-pw" class="label-radio">
+              <input class="input-db" id="db43-pw" type="radio" name="db-wallP" value="563">
+              <div class="label-radio__btn"></div>
+              43 дБ
+            </label>
+
+            <label for="db45-pw" class="label-radio">
+              <input class="input-db" id="db45-pw" type="radio" name="db-wallP" value="568">
+              <div class="label-radio__btn"></div>
+              45 дБ
+            </label>
+
+            <label for="db47-pw" class="label-radio">
+              <input class="input-db" id="db47-pw" type="radio" name="db-wallP" value="572">
+              <div class="label-radio__btn"></div>
+              47 дБ
+            </label>
+
+            <label for="db50-pw" class="label-radio">
+              <input class="input-db" id="db50-pw" type="radio" name="db-wallP" value="581">
+              <div class="label-radio__btn"></div>
+              50 дБ
+            </label>
+
+            <label for="db53-pw" class="label-radio">
+              <input class="input-db" id="db53-pw" type="radio" name="db-wallP" value="594">
+              <div class="label-radio__btn"></div>
+              53 дБ
+            </label>
+
+            <label for="db57-pw" class="label-radio">
+              <input class="input-db" id="db57-pw" type="radio" name="db-wallP" value="616">
+              <div class="label-radio__btn"></div>
+              57 дБ
+            </label>
+
+            <label for="db58-pw" class="label-radio">
+              <input class="input-db" id="db58-pw" type="radio" name="db-wallP" value="623">
+              <div class="label-radio__btn"></div>
+              58 дБ
+            </label>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="calc-write__item">
+        <h3 class="calc-write__item-head">Количество дверей</h3>
+        <div class="form-row doors">
+
+          <label for="door-0" class="label-radio">
+            <input class="input-door input-door--first" id="door-0" type="radio" name="doors" value="0" disabled checked>
+            <div class="label-radio__btn"></div>
+            0
+          </label>
+
+          <label for="door-1" class="label-radio">
+            <input class="input-door" id="door-1" type="radio" name="doors" value="200000" disabled >
+            <div class="label-radio__btn"></div>
+            1
+          </label>
+
+          <label for="door-2" class="label-radio">
+            <input class="input-door" id="door-2" type="radio" name="doors" value="400000" disabled >
+            <div class="label-radio__btn"></div>
+            2
+          </label>
+
+          <label for="door-3" class="label-radio">
+            <input class="input-door" id="door-3" type="radio" name="doors" value="600000" disabled >
+            <div class="label-radio__btn"></div>
+            3
+          </label>
+
+        </div>
+      </div>
+
+
+      <div class="calc-summa">
+        <h4>Стоимость:</h4>
+        <div class="calc-summa__price"><span id="itog">0</span> ₽ *</div>
+      </div>
+      <div class="calc-summa__desc">
+        *усреднённая стоимость товара без учета НДС
+      </div>
+
+
+      <a href="#" class="btn-primary">Получить точный расчет</a>
+
+    </div>
+
+
+  </form>
+
+
+<!--   <script>
+    function CBR_XML_Daily_Ru(rates) {
+
+      var EURrate = rates.Valute.EUR.Value.toFixed(0).replace('.', ',');
+      var EUR = document.getElementById('EUR');
+      EUR.innerHTML = EUR.innerHTML.replace('00,0000', EURrate);
+    }
+  </script>
+ -->
+</section>
+
+

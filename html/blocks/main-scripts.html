@@ -1,0 +1,18 @@
+<!-- <script src="https://www.cbr-xml-daily.ru/daily_jsonp.js"></script> -->
+<script>
+	var EUR = document.getElementById('euro');
+	function CBR_XML_Daily_Ru(rates) {
+	    var EURrate = rates.Valute.EUR.Value.toFixed(0).replace('.', ',');
+	    console.log(EURrate);
+	    console.log(EURrate !== null && EURrate !== undefined ? EURrate : '75');
+	    EUR.innerHTML = EURrate !== null && EURrate !== undefined ? EURrate : '75';
+	  }
+	  (function(){
+	  	if (EUR.innerHTML === '') {
+	  		EUR.innerHTML = '75';
+	  	}
+	  })();
+</script>
+
+<script src="@@path/build/global.js"></script>
+<script src="https://www.cbr-xml-daily.ru/daily_jsonp.js" async></script>

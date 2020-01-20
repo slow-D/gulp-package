@@ -1,14 +1,29 @@
 .mobile-menu
 	position fixed
 	background-color primaryBlueColor
-	height calc(100vh - 70px)
-	top 70px
+	height calc(100vh - 90px)
+	top 90px
 	right -100%
 	width 100%
 	z-index 5
 	transition transform .2s ease-out
+	display flex
+	flex-direction column
+	align-items center
+	justify-content space-around
+	padding 3% 0
+	overflow-y auto
+	@media (max-width: 460px)
+		height calc(100vh - 70px)
+		top 70px
 	&--animate
 		transform translate(-100%)
+	.header__contacts
+		@media (max-width: 1280px)
+			display flex
+			margin-top 7%
+	.header__contacts-item
+		color #fff
 
 .mobile-menu-gamburg
 	position relative
@@ -39,6 +54,8 @@
 			top 0
 		&:after
 			bottom 0
+	@media (max-width: 1280px)
+		display flex
 .mobile-menu-gamburg--close
 	.mobile-menu-gamburg__wrap
 		&-line
